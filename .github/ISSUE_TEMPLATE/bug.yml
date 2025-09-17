@@ -1,0 +1,27 @@
+name: "Bug report"
+description: "Report a bug or unexpected behavior"
+title: "[BUG] <short description>"
+labels: ["bug"]
+body:
+  - type: input
+    id: taskid
+    attributes:
+      label: Related TaskID (if any)
+      placeholder: "TASK-123"
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      placeholder: "Steps to reproduce, expected vs actual"
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: "OS, Node.js version, browser, etc."
+  - type: textarea
+    id: extra
+    attributes:
+      label: Additional context
+      placeholder: "Logs, screenshots, or related issues"

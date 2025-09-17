@@ -1,0 +1,27 @@
+name: "Feature request"
+description: "Propose a new feature or improvement"
+title: "[FEAT] <short description>"
+labels: ["enhancement"]
+body:
+  - type: input
+    id: taskid
+    attributes:
+      label: Related TaskID (if any)
+      placeholder: "TASK-123"
+  - type: textarea
+    id: value
+    attributes:
+      label: Why is this valuable?
+      placeholder: "Impact or problem it solves"
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      placeholder: "Deliverables, constraints, out-of-scope"
+  - type: textarea
+    id: extra
+    attributes:
+      label: Additional context
+      placeholder: "References, diagrams, examples"

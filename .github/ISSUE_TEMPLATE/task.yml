@@ -1,0 +1,66 @@
+name: "New Task"
+description: "Create a new Task (assignable unit of work)"
+title: "TASK-<id>: <short title>"
+labels: ["task"]
+body:
+  - type: input
+    id: taskid
+    attributes:
+      label: TaskID
+      description: Unique identifier (e.g. TASK-123)
+      placeholder: TASK-123
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: What problem does this Task solve?
+      placeholder: Explain the background and why this is needed.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: List measurable outcomes that must be met.
+      placeholder: "- API returns correct response\n- Unit tests cover success + error cases"
+    validations:
+      required: true
+  - type: dropdown
+    id: size
+    attributes:
+      label: Size
+      description: Estimated effort level
+      options:
+        - S (1-2 days)
+        - M (3-5 days)
+        - L (design summary required)
+    validations:
+      required: true
+  - type: input
+    id: dri
+    attributes:
+      label: DRI (Directly Responsible Individual)
+      placeholder: "@username"
+    validations:
+      required: true
+  - type: input
+    id: peer
+    attributes:
+      label: Peer Reviewer
+      placeholder: "@username"
+    validations:
+      required: true
+  - type: input
+    id: approver
+    attributes:
+      label: Final Approver
+      placeholder: "@maintainer"
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes / Additional Info
+      description: Optional extra details or links

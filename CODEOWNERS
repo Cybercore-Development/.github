@@ -1,0 +1,11 @@
+# CODEOWNERS
+# This file defines the final approvers (Core Maintainers) for all code in this org.
+# Note: "Require review from Code Owners" must be enabled in branch protection for this to take effect.
+
+# Apply to all files in all repos by default
+*       @core-maintainers
+
+# Later on for per-folder ownership, extended to scale up the team:
+# src/api/       @api-maintainers
+# src/frontend/  @frontend-maintainers
+# docs/          @docs-team
