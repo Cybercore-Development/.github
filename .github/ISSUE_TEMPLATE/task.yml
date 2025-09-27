@@ -11,6 +11,7 @@ body:
       placeholder: TASK-123
     validations:
       required: true
+
   - type: textarea
     id: context
     attributes:
@@ -19,6 +20,7 @@ body:
       placeholder: Explain the background and why this is needed.
     validations:
       required: true
+
   - type: textarea
     id: acceptance
     attributes:
@@ -27,6 +29,7 @@ body:
       placeholder: "- API returns correct response\n- Unit tests cover success + error cases"
     validations:
       required: true
+
   - type: dropdown
     id: size
     attributes:
@@ -34,24 +37,36 @@ body:
       description: Estimated effort level
       options:
         - S (1-2 days)
-        - M (3-5 days)
-        - L (design summary required)
+        - M (3-6 days)
+        - L (>7 days, Design summary required)
     validations:
       required: true
+
+  - type: input
+    id: payout
+    attributes:
+      label: Payout
+      description: Amount and currency
+      placeholder: "SGD 120"
+    validations:
+      required: true
+
   - type: input
     id: dri
     attributes:
       label: DRI (Directly Responsible Individual)
-      placeholder: "@username"
+      placeholder: "Leave blank - assigned via Telegram"
     validations:
-      required: true
+      required: false
+
   - type: input
     id: peer
     attributes:
       label: Peer Reviewer
-      placeholder: "@username"
+      placeholder: "Leave blank - assigned via Telegram"
     validations:
-      required: true
+      required: false
+
   - type: input
     id: approver
     attributes:
@@ -59,6 +74,7 @@ body:
       placeholder: "@maintainer"
     validations:
       required: true
+
   - type: textarea
     id: notes
     attributes:
